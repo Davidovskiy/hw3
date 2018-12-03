@@ -1,0 +1,187 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+header {
+    display: flex;
+    height: 100px;
+    background: #3c398b;
+    font-family:'Sedgwick Ave', cursive;
+    font-weight: normal;
+}
+
+.head1 {
+    width: 80%;
+}
+
+.head2 {
+    width: 20%;
+    text-align:right;
+}
+
+header h1 {
+    margin: 20px;
+    color: white;
+
+}
+
+button {
+    padding:10px 30px;
+    margin-top:25px;
+    margin-right:50px;
+    background-color: #b5bed9;
+    color: #3c398b;
+    font-size:20px;
+    font-weight: normal;
+    border-radius: 25px;
+    border:1px solid #b5bed9;
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 100px);
+}
+
+nav{
+    height: 100%;
+    width: 60px;
+    background-color: gainsboro;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+    display: block;
+    text-align: center;
+    color:#000;
+    font-size: 32px;
+    padding: 10px 0;
+    position: relative;
+}
+
+
+.text {
+    width: calc(100% - 60px);
+    height: 100%;
+    padding: 0 20px;
+    margin-left: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: justify;
+}
+
+a:hover {
+    background-color: #f2f2f4;
+    color:#3c398b;
+    transition:0.3s;
+}
+
+#home, #portfolio, #contacts, #help {
+    display: none;
+}
+
+#home:target {
+    display: block;
+}
+
+
+.text div:target ~ #help{
+    display: none;
+}
+
+.container div:target ~ #home{
+    display: none;
+}
+
+#portfolio:target {
+    display: block;
+}
+
+#contacts:target{
+    display: block;
+}
+
+#help {
+    display: block;
+}
+
+a:hover::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 35%;
+    left: 80%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #3c398b transparent transparent;
+}
+
+.home_1:hover::after{
+    content: "Home";
+    font-size: 20px;
+    font-family:'Nanum Gothic', sans-serif ;
+    color:white;
+    padding:5px 10px;
+    position: absolute;
+    top: 20%;
+    left: calc(100% + 8px);
+    display: block;
+    background-color:#3c398b;
+    border:2px solid #3c398b;
+}
+
+.portfolio_1:hover::after{
+    content: "Portfolio";
+    font-size: 20px;
+    font-family:'Nanum Gothic', sans-serif ;
+    color:white;
+    padding:5px 10px;
+    position: absolute;
+    top: 20%;
+    left: calc(100% + 8px);
+    display: block;
+    background-color:#3c398b;
+    border:2px solid #3c398b;
+}
+
+.contacts_1:hover::after{
+    content: "Contacts";
+    font-size: 20px;
+    font-family:'Nanum Gothic', sans-serif ;
+    color:white;
+    padding:5px 10px;
+    position: absolute;
+    top: 20%;
+    left: calc(100% + 8px);
+    display: block;
+    background-color:#3c398b;
+    border:2px solid #3c398b;
+}
+
+.help_1:hover::after{
+    content: "Help";
+    font-size: 20px;
+    font-family:'Nanum Gothic', sans-serif ;
+    color:white;
+    padding:5px 10px;
+    position: absolute;
+    top: 20%;
+    left: calc(100% + 8px);
+    display: block;
+    background-color: #3c398b;
+    border:2px solid #3c398b;
+}
